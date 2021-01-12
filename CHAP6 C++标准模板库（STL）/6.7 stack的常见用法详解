@@ -1,2 +1,69 @@
 6.7 stack的常见用法详解
 
+stack翻译为栈
+是STL中实现的一个后进先出的容器
+
+1 stack的定义
+
+#include<stack>
+using namespace std;
+
+stack<typename>name;
+typename可以任意基本数据类型或容器；
+
+2 stack容器内元素的访问
+
+stack本身就是一种后进先出的数据结构
+在STL中的stack只能通过top()来访问栈顶元素
+
+for(i);
+st.push(i);
+printf("%d\n",st.top());
+
+3 stack常用函数实例解析
+
+A push()
+
+push(x)将x入栈
+时间复杂度为O(1)
+
+B top()
+
+top()获得栈顶元素
+时间复杂度为O(1)
+
+C pop()
+
+pop()用以弹出栈顶元素
+时间复杂度为O(1)
+
+D empty()
+
+empty()可以检测stack内是否为空
+返回ture为空
+返回false为非空
+时间复杂度为O(1)
+
+if(empty()==true){}
+
+E size()
+
+size()返回stack内元素的个数
+时间复杂度为O(1)
+
+4 stack常见用途
+
+stack用来模拟实现一些递归
+防止程序对栈内存的限制而导致的程序运行出错
+一般来说
+程序的栈内存空间很小
+对有些题目来说
+如果用普通的函数来进行递归
+一旦递归层数过深
+（机器不同情况不同，约几千至几万层）
+会导致程序运行崩溃
+如果用栈来模拟递归算法的实现
+则可以避免这一方面的问题
+
+
+
