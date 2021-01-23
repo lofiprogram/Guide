@@ -13,3 +13,40 @@ struct pair{
 };
 
 1 pair的定义
+
+使用pair应该先添加
+
+#include<utility>
+using namespace std;
+
+注意：
+由于map的内部实现中涉及pair
+因此添加map头文件时
+会自动添加utility头文件
+此时如需使用pair
+就不需要额外再添加utility头文件了
+
+pair有两个参数
+分别对应first和second的数据类型
+它们可以是任意基本数据类型或容器
+
+pair<typename1,typename2> name;
+
+定义参数为string和int类型的pair
+pair<string,int> p;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
